@@ -16,9 +16,9 @@ Through the interface you can monitor the defined variables, functions and the c
 # Usage
 This application is written in pure Java.
 To compile it use :
-#### javac -cp "./LIB/*" -d ./BUILD ./SRC/*.java
+### javac -cp "./LIB/*" -d ./BUILD ./SRC/*.java
 To run it :
-#### java -cp "./BUILD;./LIB/*" Main
+### java -cp "./BUILD;./LIB/*" Main
 
 # Examples
 
@@ -46,156 +46,156 @@ BEGIN <- num 2 MOD <- num 2 / DUP 0 != IF ++ count THEN DUP -> num 0 == UNTIL
 
 # Language reference
 
-#### ^
+### ^
 ( n -- )
 Remove the value at the top of the stack and print it on the output.
 
-#### CR
+### CR
 ( -- )
 Append a carriage return to the output.
 
-#### SPACE
+### SPACE
 ( -- )
 Append a empty space to the output.
 
-#### " xxx "
+### " xxx "
 ( -- )
 Append the ascii text xxx to the output.
 
-#### ==
+### ==
 ( n1 n2  -- n1==n2 )
 Remove the two values at the top of the stack and push back 1 if equals, otherwise 0.
 
-#### !=
+### !=
 ( n1 n2  -- n1!=n2 )
 Remove the two values at the top of the stack and push back 1 if equals, otherwise 0.
 
-#### \>
+### \>
 ( n1 n2  -- n1>n2 )
 Remove the two values at the top of the stack and push back 1 if n1>n2, otherwise 0.
 
-#### <
+### <
 ( n1 n2  -- n1<n2 )
 Remove the two values at the top of the stack and push back 1 if n1<n2, otherwise 0.
 
-#### NOT
+### NOT
 ( n -- !n )
 Remove the value at the top of the stack and push back the logical NOT.
 
-#### AND
+### AND
 ( n1 n2 -- n1&n2 )
 Remove the value at the top of the stack and push back the logical AND.
 
-#### OR
+### OR
 ( n1 n2 -- n1|n2 )
 Remove the value at the top of the stack and push back the logical OR.
 
-#### \+
+### \+
 ( n1 n2 -- n1+n2 )
 Remove the value at the top of the stack and push back their sum.
 
-#### \-
+### \-
 ( n1 n2 -- n1-n2 )
 Remove the value at the top of the stack and push back the difference.
 
-#### \*
+### \*
 ( n1 n2 -- n1*n2 )
 Remove the value at the top of the stack and push back their product.
 
-#### /
+### /
 ( n1 n2 -- n1/n2 )
 Remove the value at the top of the stack and push back the result of the division.
 
-#### ++ xxx
+### ++ xxx
 ( -- )
 Increase by 1 the value of the variable named xxx.
 
-#### -- xxx
+### -- xxx
 ( -- )
 Decrease by 1 the value of the variable named xxx.
 
-#### MOD
+### MOD
 ( n1 n2 -- n1%n2 )
 Remove the value at the top of the stack and push back the reaminder of the division.
 
-#### ABS
+### ABS
 ( n -- abs(n) )
 Remove the value at the top of the stack and push back the absolute value.
 
-#### NEG
+### NEG
 ( n -- -n )
 Change the sign of the value at thte top of the stack.
 
-#### MIN
+### MIN
 ( n1 n2 -- min(n1,n2) )
 Remove the two values at the top of the stack and push back the smallest of them.
 
-#### MAX
+### MAX
 ( n1 n2 -- max(n1,n2) )
 Remove the two values at the top of the stack and push back the greatest of them.
 
-#### <<
+### <<
 ( n -- n<<1 )
 Perform the left shit of the value at the top of the stack.
 
-#### \>\>
+### \>\>
 ( n -- n>>1 )
 Perform the right shit of the value at the top of the stack.
 
-#### DUP
+### DUP
 ( n -- n n )
 Duplicates the value at the the top of the stack and push it back.
 
-#### SWAP
+### SWAP
 ( n1 n2 -- n2 n1 )
 Swap the values at the top of the stack.
 
-#### DROP
+### DROP
 ( n --  )
 Discard the value at the top of the stack.
 
-#### FUNCTION xxx yyy ;
+### FUNCTION xxx yyy ;
 ( -- )
 Creates a new function with the name xxx, containing yyy instructions.
 To execute the function just call xxx. 
 
-#### VARIABLE xxx ;
+### VARIABLE xxx ;
 ( -- )
 Creates a new variable with the name xxx with value 0 by default. 
 
-#### DELETE xxx ;
+### DELETE xxx ;
 ( -- )
 Delete the user defined function or variable named xxx. 
 
-#### DO xxx LOOP
+### DO xxx LOOP
 ( n1 n2 -- )
 Remove the two values at the top of the stack and repeat the execution of xxx instructions for n1 times, starting from n2.
 
-#### BEGIN xxx UNTIL
+### BEGIN xxx UNTIL
 ( f -- )
 Execute xxx until the top of the stack is 0, of consequence xxx should leave a flag on the top of the stack.
 
-#### IF xxx ELSE yyy THEN zzz
+### IF xxx ELSE yyy THEN zzz
 ( n -- )
 Remove the value at the top of the stack and if it is 1 execute xxx otherwise it execute yyy then execute zzz.
 The ELSE branch is otpional.
 
-#### -> xxx
+### -> xxx
 ( n -- )
 Remove the value at the top of the stack and put it in the variable xxx.
 
-#### <- xxx
+### <- xxx
 ( -- n )
 Push on the stack the value of the variable xxx.
 
-#### FUNC xxx
+### FUNC xxx
 ( -- )
 Print to the output the intructions of the function named xxx.
 
-#### VAR xxx
+### VAR xxx
 ( -- )
 Print to the output the value of the variable named xxx.
 
-#### \#
+### \#
 ( -- )
 Identified a comment everything after # it is ignored.
