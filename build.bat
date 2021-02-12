@@ -1,0 +1,1 @@
+javac -cp "./LIB/*" -d ./BUILD ./SRC/*.java

@@ -1,0 +1,23 @@
+----------
+# the first eight numbers of fibonacci serie
+
+VARIABLE sup ;
+VARIABLE inf ;
+
+0 -> inf
+1 -> sup
+
+8 0 DO <- inf <- sup + DUP ^ SPACE <- sup -> inf -> sup LOOP
+
+----------
+# print the number 13 as binary
+
+VARIABLE num ;
+VARIABLE count ;
+
+13 -> num
+0 -> count
+
+BEGIN <- num 2 MOD <- num 2 / DUP 0 != IF ++ count THEN DUP -> num 0 == UNTIL
+
+++ count <- count 0 DO ^ SPACE LOOP

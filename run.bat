@@ -1,0 +1,1 @@
+java -cp "./BUILD;./LIB/*" Main
